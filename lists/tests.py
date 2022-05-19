@@ -6,7 +6,7 @@ from lists.views import home_page
 
 from django.test import TestCase
 
-from lists.models import Item
+from lists.models import Item, List
 
 class HomePageTest(TestCase):
 
@@ -62,10 +62,6 @@ class ListViewTest(TestCase):
         self.assertTemplateUsed(response, 'list.html')
 
     def test_displays_all_items(self):
-        Item.objects.create(text='itemey 1')
-        Item.objects.create(text='itemey 2')
-
-        response = self.client.get('/lists/the-only-list-in-the-world/')
-
-        self.assertContains(response, 'itemey 1')
-        self.assertContains(response, 'itemey 2')
+        my_list = List.objects.create()
+        Item.objects.create(text='itemey 1', list=my_list)
+        Item.objects.create(text='itemey 2', list=my_list)
