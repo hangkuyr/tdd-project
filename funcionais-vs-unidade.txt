@@ -1,0 +1,7 @@
+Testes Funcionais vs. Testes de Unidade
+
+Duas diferenças simples entre Testes Funcionais e Testes de Unidade
+
+1. A técnica utilizada por cada um é diferente, testes de unidade são testes de caixa branca, ou seja, são feitos sabendo como funciona o código, enquanto testes funcionais são caixa preta, ou seja, são feitos com base apenas na interface do ponto de vista do usuário.
+
+2. Outra difereça entre eles está no custo, testes de unidade tem baixo custo enquanto testes dfuncionais tem alto custo.
