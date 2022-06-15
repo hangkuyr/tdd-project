@@ -12,7 +12,7 @@ class LayoutAndStyling(FunctionalTest):
         inputbox = self.browser.find_element_by_id('id_new_item')
         self.assertAlmostEqual(
             inputbox.location['x'] + inputbox.size['width'] / 2,
-            512,
+            81
             delta=10
         )
 
@@ -24,6 +24,6 @@ class LayoutAndStyling(FunctionalTest):
         inputbox = self.browser.find_element_by_id('id_new_item')
         self.assertAlmostEqual(
             inputbox.location['x'] + inputbox.size['width'] / 2,
-            512,
+            81
             delta=10
         )
